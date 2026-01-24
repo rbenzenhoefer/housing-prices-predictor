@@ -10,9 +10,9 @@ Machine Learning project for predicting house prices using ensemble methods.
 | 04_feature_engineering | Ridge + Features | 0.1439 | 0.8772 | +5.8% |
 | 05_advanced_models | XGBoost | 0.1374 | 0.8880 | +10.0% |
 | 05_advanced_models | LightGBM | 0.1342 | 0.8931 | +12.1% |
-| **06_ensemble** | **Weighted Ensemble** | **0.1319** | **0.8968** | **+13.6%** |
+| **06_ensemble** | **Weighted Ensemble** | **0.1308** | **0.8985** | **+14.3%** |
 
-**🏆 Best Model:** Stacked Ensemble with **RMSE 0.1319** (13.6% improvement over baseline)
+**🏆 Best Model:** Stacked Ensemble with **RMSE 0.1308** (13.6% improvement over baseline)
 
 ---
 
@@ -301,7 +301,7 @@ Weighted Ensemble (0.1319) ← BEST!
 1. **submission.csv** - Ridge baseline (RMSE 0.1527)
 2. **submission_feature_engineering.csv** - Ridge + features (RMSE 0.1439)
 3. **submission_advanced_models.csv** - XGBoost/LightGBM (RMSE ~0.134)
-4. **submission_ensemble.csv** - Stacked ensemble (RMSE 0.1319) ⭐
+4. **submission_ensemble.csv** - Stacked ensemble (RMSE 0.1308) ⭐
 
 ---
 
