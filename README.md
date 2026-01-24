@@ -12,7 +12,7 @@ Machine Learning project for predicting house prices using ensemble methods.
 | 05_advanced_models | LightGBM | 0.1342 | 0.8931 | +12.1% |
 | **06_ensemble** | **Weighted Ensemble** | **0.1308** | **0.8985** | **+14.3%** |
 
-**🏆 Best Model:** Stacked Ensemble with **RMSE 0.1308** (13.6% improvement over baseline)
+**🏆 Best Model:** Stacked Ensemble with **RMSE 0.1308** (14.3% improvement over baseline)
 
 ---
 
