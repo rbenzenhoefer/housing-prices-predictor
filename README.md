@@ -289,10 +289,10 @@ XGBoost (0.1374)
          ↓ (+2.3%)
 LightGBM (0.1342)
          ↓ (+1.7%)
-Weighted Ensemble (0.1319) ← BEST!
+Stacked Ensemble (0.1308) ← BEST!
 ```
 
-**Total Improvement:** 13.6% from baseline to ensemble
+**Total Improvement:** 14.3% from baseline to ensemble
 
 ---
 
@@ -308,13 +308,10 @@ Weighted Ensemble (0.1319) ← BEST!
 ## 🚀 Next Steps & Improvements
 
 ### Potential Enhancements:
-- [ ] Upload best submission to Kaggle leaderboard
-- [ ] Hyperparameter tuning with GridSearchCV/RandomizedSearchCV
-- [ ] Cross-validation (5-fold CV) for more robust evaluation
+- [ ] Hyperparameter tuning
+- [ ] Cross-validation for more robust evaluation
 - [ ] Feature selection to reduce dimensionality
 - [ ] Try additional models (CatBoost, Neural Networks)
-- [ ] Implement automated feature engineering (Featuretools)
-- [ ] Add model explainability (SHAP values)
 
 ---
 
