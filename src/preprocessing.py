@@ -180,23 +180,22 @@ def encode_ordinal_features(df):
     return df
 
 
-def preprocess_data(train_df, test_df, remove_outliers_flag=True):
+def preprocess_data(train_df, remove_outliers_flag=True):
     """
-    Komplettes Preprocessing für Training und Test Sets
+    Komplettes Preprocessing
     
     Args:
         train_df: Training DataFrame
-        test_df: Test DataFrame
         remove_outliers_flag: Ob Outliers entfernt werden sollen
         
     Returns:
-        train_processed, test_processed, y_log (log-transformierter Target)
+        train_processed, y_log (log-transformierter Target)
     """
     print("=" * 50)
     print("Start Preprocessing...")
     print("=" * 50)
     
-    # 1. Outliers entfernen (nur Training)
+    # 1. Outliers entfernen
     if remove_outliers_flag:
         train_df = remove_outliers(train_df)
     
@@ -206,26 +205,21 @@ def preprocess_data(train_df, test_df, remove_outliers_flag=True):
     
     # IDs speichern
     train_ids = train_df['Id']
-    test_ids = test_df['Id']
     
     # 3. Features vorbereiten (ohne SalePrice und Id)
     train_features = train_df.drop(['SalePrice', 'Id'], axis=1)
-    test_features = test_df.drop(['Id'], axis=1)
     
     # 4. Fehlende Werte behandeln
     print("\n1. Handeling Missing Values...")
     train_features = handle_missing_values(train_features)
-    test_features = handle_missing_values(test_features)
     
     # 5. Ordinale Features encoden
     print("\n2. Encoding Ordinal Features...")
     train_features = encode_ordinal_features(train_features)
-    test_features = encode_ordinal_features(test_features)
-    
+
     print("\n" + "=" * 50)
     print("Preprocessing Done!")
     print(f"Training Shape: {train_features.shape}")
-    print(f"Test Shape: {test_features.shape}")
     print("=" * 50)
     
-    return train_features, test_features, y_log, train_ids, test_ids
+    return train_features, y_log, train_ids
